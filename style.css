@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0;
+    transition: background-image 1s ease-in-out;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensure video is in the background */
+}
+
+.app-main {
+    min-height: 10vh;
+    width: 30vw;
+    padding: 20px;
+    text-align: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 15px;
+    background: #c0dfec; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #92fe9d, #c0dfec); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #92fe9d, #c0dfec); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Make sure .app-main is on top of the video */
+    z-index: 1; /* Ensure content is above the video */
+}
+
+.searchInputBox {
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    width: 100%;
+    background: rgb(44, 51, 51);
+    color: #f8f2f2;
+    font-weight: 500;
+    border: none;
+    font-size: 1.7rem;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    outline: none;
+}
+
+#search-button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.7rem;
+    color: #f8f2f2;
+}
+
+.weather-body {
+    color: #fff;
+    padding: 20px;
+    line-height: 2rem;
+    border-radius: 10px;
+    background: linear-gradient(to top, #42aab4, #79c0a8);
+    display: none;
+    width: 100%;
+}
+
+.location-deatils {
+    font-weight: bold;
+}
+
+.weather-status {
+    padding: 20px;
+}
+
+.temp {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 20px 0px;
+    text-shadow: 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.weather {
+    margin-top: 25px;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.min-max {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.day-details {
+    padding: 20px;
+}
+
+.sun-detail,
+.basic {
+    font-size: 1rem;
+}
+
+#weather-icon {
+    color: black;
+}
+
+/* Animation for the forecast rows */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#forecast {
+    margin-top: 20px;
+    color: #fff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#forecast table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#forecast th, #forecast td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #fff;
+}
+
+#forecast th {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#forecast tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#forecast tr:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.forecast-row {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 800px) {
+    .app-main {
+        width: 95%;
+        padding: 10px;
+    }
+
+    body {
+        min-height: 100vh;
+    }
+}

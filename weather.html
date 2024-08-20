@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="shortcut icon" href="img/bg1.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- SweetAlert CDN -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="img/vv.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="app-main" id="parent">
+        <div class="header">
+            <h4>Get Weather</h4>
+        </div>
+        <div class="searchInputBox">
+            <input type="text" id="input-box" class="input-box" placeholder="Enter city name">
+            <button id="search-button"><i class="fas fa-search"></i></button>
+        </div>
+        <div id="weather-body" class="weather-body">
+            <!-- Weather information will be dynamically inserted here -->
+        </div>
+        <div id="forecast">
+            <!-- Forecast data will be dynamically inserted here -->
+        </div>
+    </div>
+    
+    <button id="download-button" style="display:none;">Download</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
