@@ -115,7 +115,7 @@ body {
 }
 
 .day-details {
-    padding: 20px;
+    padding: 50px;
 }
 
 .sun-detail,
@@ -124,7 +124,7 @@ body {
 }
 
 #weather-icon {
-    color: black;
+    color: rgb(214, 176, 176);
 }
 
 /* Animation for the forecast rows */
@@ -140,23 +140,23 @@ body {
 }
 
 #forecast {
-    margin-top: 20px;
+    margin-top: 50px;
     color: #fff;
     animation: fadeIn 1s ease-in-out;
 }
 
 #forecast table {
-    width: 100%;
+    width: 200%;
     border-collapse: collapse;
-    border-radius: 10px;
+    border-radius: 50px;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
 #forecast th, #forecast td {
-    padding: 10px;
+    padding: 25px;
     text-align: center;
-    border: 1px solid #fff;
+    border: 5px solid #fff;
 }
 
 #forecast th {
@@ -172,16 +172,60 @@ body {
 }
 
 .forecast-row {
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.9s ease-in-out;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .app-main {
         width: 95%;
-        padding: 10px;
+        padding: 100px;
     }
 
     body {
-        min-height: 100vh;
+        min-height: 90vh;
     }
+}
+.searchInputBox {
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between; /* Ensure buttons are spaced out */
+    align-items: center; /* Align items vertically */
+}
+
+.input-box {
+    width: 100%;
+    background: rgb(44, 51, 51);
+    color: #f8f2f2;
+    font-weight: 00;
+    border: none;
+    font-size: 1.7rem;
+    border-radius: 50px;
+    padding: 10px;
+    text-align: center;
+    outline: none;
+    margin-right: 10px; /* Add space between input and first button */
+}
+
+#search-button, #location-button, #unit-toggle {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.re5m;
+    color: #f8f2f2;
+    margin-left: 50px; /* Space between buttons */
+}
+
+/* To reorder, ensure they are added in the desired order in HTML or use the following CSS properties */
+#search-button {
+    order: 1; /* Order can be 1, 2, 3 based on desired sequence */
+}
+
+#location-button {
+    order: 6;
+}
+
+#unit-toggle {
+    order: 7;
 }
